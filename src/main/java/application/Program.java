@@ -14,19 +14,7 @@ public class Program {
         Statement st = null;
         ResultSet rs = null;
 
-        try{
-            conn = DBConnection.getConnection();
-            st = conn.createStatement();
-
-            rs = st.executeQuery("SELECT * FROM department");
-
-            while (rs.next()){
-                System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));
-            }
-        }
-        catch(SQLException e){
-            e.printStackTrace();
-        }
-
+        conn = DBConnection.getConnection();
+        DBConnection.closeConnection();
     }
 }

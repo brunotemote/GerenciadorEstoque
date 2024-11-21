@@ -1,11 +1,10 @@
 package util;
 
 import java.io.*;
-import java.security.cert.TrustAnchor;
 import java.sql.*;
 import java.util.Properties;
 
-public class DBConnection {
+public class DB {
 
     private static Connection conn = null;
     private static boolean firstTimeStart = Boolean.parseBoolean(loadPropeties().getProperty("firstTimeStart", "true"));

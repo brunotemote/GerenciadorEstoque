@@ -55,7 +55,7 @@ public class RemoverProduto extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("Digite o produto que você deseja adicionar ou remover:");
+        jLabel1.setText("Digite o produto que você deseja remover:");
 
         buttonVoltar.setText("Voltar");
         buttonVoltar.addActionListener(new java.awt.event.ActionListener() {

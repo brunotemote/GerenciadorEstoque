@@ -8,7 +8,7 @@ package view;
  *
  * @author davi
  */
-public class RemoverProduto extends javax.swing.JPanel {
+public class RemoverProduto extends javax.swing.JFrame {
 
     /**
      * Creates new form remover

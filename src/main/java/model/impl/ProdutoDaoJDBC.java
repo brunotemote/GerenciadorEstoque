@@ -21,8 +21,9 @@ public class ProdutoDaoJDBC implements ProdutoDao {
     }
 
     @Override
-    public void insert(Produto obj) {
+    public boolean insert(Produto obj) {
         PreparedStatement st = null;
+        boolean isInserted = false;
 
         try{
             st = conn.prepareStatement("CALL cadastro_produto(?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
@@ -46,16 +47,69 @@ public class ProdutoDaoJDBC implements ProdutoDao {
                 obj.setId(id);
             }
             DB.closeResultSet(rs);
+
+            isInserted = true;
         } catch (SQLException e){
             throw new DbException(e.getMessage());
         } finally {
             DB.closeStatement(st);
         }
+
+        return isInserted;
+
     }
 
     @Override
-    public void update(Produto obj) {
+    public Integer update(String nome, String valorCompra, String valorVenda, String quantidade) {
+        PreparedStatement st = null;
+        StringBuilder sql = new StringBuilder("UPDATE Produto SET ");
 
+        int rowsAffected = 0;
+        double valorCompraDouble = 0;
+        double valorVendaDouble = 0;
+        int quantidadeInt = 0;
+
+        if (!valorCompra.isEmpty()) {
+            valorCompraDouble = Double.parseDouble(valorCompra);
+            sql.append("preco_compra").append(" = ?, ");
+        }
+        if (!valorVenda.isEmpty()) {
+            valorVendaDouble = Double.parseDouble(valorVenda);
+            sql.append("preco_venda").append(" = ?, ");
+        }
+        if (!quantidade.isEmpty()) {
+            quantidadeInt = Integer.parseInt(quantidade);
+            sql.append("quantidade_estoque").append(" = ?, ");
+        }
+
+        sql.setLength(sql.length() - 2);
+
+        sql.append(" WHERE nome = ?");
+
+        try{
+            int index = 1;
+            st = conn.prepareStatement(sql.toString());
+            if (valorCompraDouble != 0) {
+                st.setDouble(index++, valorCompraDouble);
+            }
+            if (valorVendaDouble != 0) {
+                st.setDouble(index++, valorVendaDouble);
+            }
+            if (quantidadeInt != 0) {
+                st.setInt(index++, quantidadeInt);
+            }
+
+            st.setString(index, nome);
+
+            rowsAffected = st.executeUpdate();
+
+        } catch (SQLException e){
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+        }
+
+        return rowsAffected;
     }
 
     @Override
@@ -72,7 +126,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
                     "SELECT Produto.*, Categoria.nome as nome_categoria, Categoria.descricao as descricao_categoria "
                     + "FROM Produto INNER JOIN Categoria "
                     + "ON Produto.categoria_id = Categoria.id "
-                    + "WHERE Produto.nome = ?");
+                    + "WHERE Produto.nome = ? AND Produto.deleted = 0");
 
             st.setString(1, name);
             rs = st.executeQuery();
@@ -123,6 +177,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
                     "SELECT Produto.*, Categoria.nome as nome_categoria, Categoria.descricao as descricao_categoria "
                         + "FROM Produto INNER JOIN Categoria "
                         + "ON Produto.categoria_id = Categoria.id "
+                        + "WHERE Produto.deleted = 0 "
                         + "ORDER BY nome;"
             );
 

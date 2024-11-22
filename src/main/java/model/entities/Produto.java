@@ -1,7 +1,7 @@
 package model.entities;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.*;
 
 public class Produto implements Serializable {
 
@@ -17,14 +17,14 @@ public class Produto implements Serializable {
     public Produto() {
     }
 
-    public Produto(Categoria categoria, String descricao, Integer id, String nome, Double precoCompra, Double precoVenda, Integer quantidade) {
-        this.categoria = categoria;
-        this.descricao = descricao;
+    public Produto(Integer id, String nome, String descricao, Double precoCompra, Double precoVenda, Integer quantidade, Categoria categoria) {
         this.id = id;
         this.nome = nome;
+        this.descricao = descricao;
         this.precoCompra = precoCompra;
         this.precoVenda = precoVenda;
         this.quantidade = quantidade;
+        this.categoria = categoria;
     }
 
     public Categoria getCategoria() {
@@ -82,6 +82,26 @@ public class Produto implements Serializable {
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
+
+    public String[] getTableFormat() {
+        List<Object> list = new ArrayList<>();
+        list.add(id);
+        list.add(nome);
+        list.add(descricao);
+        list.add(precoCompra);
+        list.add(precoVenda);
+        list.add(quantidade);
+        list.add(categoria.getId());
+        list.add(categoria.getNome());
+
+        String[] stringArray = list.stream()
+                .map(Object::toString)
+                .toArray(String[]::new);
+
+        return stringArray;
+    }
+
+
 
     @Override
     public boolean equals(Object o) {

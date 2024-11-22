@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ProdutoDao {
 
-    void insert(Produto obj);
-    void update(Produto obj);
+    boolean insert(Produto obj);
+    Integer update(String nome, String valorCompra, String valorVenda, String quantidade);
     void deleteByName(String name);
     Produto findByName(String name);
     List<Produto> findAll();

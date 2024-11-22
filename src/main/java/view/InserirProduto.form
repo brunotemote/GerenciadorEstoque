@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
+              <Component id="volta" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -49,7 +49,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="textFieldDescricaoCategoria" min="-2" pref="145" max="-2" attributes="0"/>
                       <EmptySpace pref="68" max="32767" attributes="0"/>
-                      <Component id="buttonEnviar" min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="Enviar" min="-2" pref="99" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -60,14 +60,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="buttonEnviar" min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="Enviar" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
+                      <Component id="volta" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -166,20 +166,20 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDescricaoCategoriaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="buttonVoltar">
+    <Component class="javax.swing.JButton" name="volta">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonVoltarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="buttonEnviar">
+    <Component class="javax.swing.JButton" name="Enviar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enviar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEnviarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EnviarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">

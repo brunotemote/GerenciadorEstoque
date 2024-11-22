@@ -38,8 +38,8 @@ public class InserirProduto extends javax.swing.JFrame {
         textFieldEstoque = new javax.swing.JTextField();
         textFieldNomeCategoria = new javax.swing.JTextField();
         textFieldDescricaoCategoria = new javax.swing.JTextField();
-        buttonVoltar = new javax.swing.JButton();
-        buttonEnviar = new javax.swing.JButton();
+        volta = new javax.swing.JButton();
+        Enviar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         textFieldVenda = new javax.swing.JTextField();
 
@@ -93,17 +93,17 @@ public class InserirProduto extends javax.swing.JFrame {
             }
         });
 
-        buttonVoltar.setText("Voltar");
-        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
+        volta.setText("Voltar");
+        volta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonVoltarActionPerformed(evt);
+                voltaActionPerformed(evt);
             }
         });
 
-        buttonEnviar.setText("Enviar");
-        buttonEnviar.addActionListener(new java.awt.event.ActionListener() {
+        Enviar.setText("Enviar");
+        Enviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonEnviarActionPerformed(evt);
+                EnviarActionPerformed(evt);
             }
         });
 
@@ -121,7 +121,7 @@ public class InserirProduto extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(buttonVoltar)
+                .addComponent(volta)
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -143,20 +143,20 @@ public class InserirProduto extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(textFieldDescricaoCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addComponent(buttonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(buttonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(buttonVoltar))
+                        .addComponent(volta))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jLabel1)
@@ -196,10 +196,6 @@ public class InserirProduto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldNomeActionPerformed
 
-    private void textFieldDescricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDescricaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldDescricaoActionPerformed
-
     private void textFieldCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCompraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldCompraActionPerformed
@@ -216,17 +212,21 @@ public class InserirProduto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldDescricaoCategoriaActionPerformed
 
-    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
+    private void voltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonVoltarActionPerformed
+    }//GEN-LAST:event_voltaActionPerformed
 
-    private void buttonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnviarActionPerformed
+    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonEnviarActionPerformed
+    }//GEN-LAST:event_EnviarActionPerformed
 
     private void textFieldVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldVendaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldVendaActionPerformed
+
+    private void textFieldDescricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDescricaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldDescricaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,8 +267,7 @@ public class InserirProduto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonEnviar;
-    private javax.swing.JButton buttonVoltar;
+    private javax.swing.JButton Enviar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -283,5 +282,6 @@ public class InserirProduto extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldNome;
     private javax.swing.JTextField textFieldNomeCategoria;
     private javax.swing.JTextField textFieldVenda;
+    private javax.swing.JButton volta;
     // End of variables declaration//GEN-END:variables
 }

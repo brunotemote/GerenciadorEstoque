@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="volta" min="-2" max="-2" attributes="0"/>
+              <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -35,21 +35,21 @@
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="descricao_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                          <Component id="nome_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                          <Component id="valorCompra_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldDescricao" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldNome" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldCompra" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="nomeCategoria_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                          <Component id="estoque_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldNomeCategoria" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldEstoque" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <Component id="valorVenda_field" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="textFieldVenda" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="descricaoCategoria_field" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Component id="textFieldDescricaoCategoria" min="-2" pref="145" max="-2" attributes="0"/>
                       <EmptySpace pref="68" max="32767" attributes="0"/>
-                      <Component id="Enviar" min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="buttonEnviar" min="-2" pref="99" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -60,44 +60,44 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="Enviar" min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="buttonEnviar" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="volta" min="-2" max="-2" attributes="0"/>
+                      <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="nome_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldNome" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="descricao_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldDescricao" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="valorCompra_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldCompra" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="valorVenda_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldVenda" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="estoque_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldEstoque" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="nomeCategoria_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldNomeCategoria" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="descricaoCategoria_field" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="textFieldDescricaoCategoria" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -136,50 +136,50 @@
         <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o da categoria:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nome_field">
+    <Component class="javax.swing.JTextField" name="textFieldNome">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldNomeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="descricao_field">
+    <Component class="javax.swing.JTextField" name="textFieldDescricao">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="descricao_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDescricaoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="valorCompra_field">
+    <Component class="javax.swing.JTextField" name="textFieldCompra">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="valorCompra_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldCompraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="estoque_field">
+    <Component class="javax.swing.JTextField" name="textFieldEstoque">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="estoque_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldEstoqueActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="nomeCategoria_field">
+    <Component class="javax.swing.JTextField" name="textFieldNomeCategoria">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeCategoria_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldNomeCategoriaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="descricaoCategoria_field">
+    <Component class="javax.swing.JTextField" name="textFieldDescricaoCategoria">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="descricaoCategoria_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDescricaoCategoriaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="volta">
+    <Component class="javax.swing.JButton" name="buttonVoltar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonVoltarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Enviar">
+    <Component class="javax.swing.JButton" name="buttonEnviar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enviar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EnviarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEnviarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -187,9 +187,9 @@
         <Property name="text" type="java.lang.String" value="Valor da venda:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="valorVenda_field">
+    <Component class="javax.swing.JTextField" name="textFieldVenda">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="valorVenda_fieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldVendaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

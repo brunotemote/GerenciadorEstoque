@@ -8,12 +8,12 @@ package view;
  *
  * @author davi
  */
-public class Inserir_componentes extends javax.swing.JFrame {
+public class InserirProduto extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public Inserir_componentes() {
+    public InserirProduto() {
         initComponents();
     }
 
@@ -32,16 +32,16 @@ public class Inserir_componentes extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        nome_field = new javax.swing.JTextField();
-        descricao_field = new javax.swing.JTextField();
-        valorCompra_field = new javax.swing.JTextField();
-        estoque_field = new javax.swing.JTextField();
-        nomeCategoria_field = new javax.swing.JTextField();
-        descricaoCategoria_field = new javax.swing.JTextField();
-        volta = new javax.swing.JButton();
-        Enviar = new javax.swing.JButton();
+        textFieldNome = new javax.swing.JTextField();
+        textFieldDescricao = new javax.swing.JTextField();
+        textFieldCompra = new javax.swing.JTextField();
+        textFieldEstoque = new javax.swing.JTextField();
+        textFieldNomeCategoria = new javax.swing.JTextField();
+        textFieldDescricaoCategoria = new javax.swing.JTextField();
+        buttonVoltar = new javax.swing.JButton();
+        buttonEnviar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        valorVenda_field = new javax.swing.JTextField();
+        textFieldVenda = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,61 +57,61 @@ public class Inserir_componentes extends javax.swing.JFrame {
 
         jLabel6.setText("Descrição da categoria:");
 
-        nome_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome_fieldActionPerformed(evt);
+                textFieldNomeActionPerformed(evt);
             }
         });
 
-        descricao_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldDescricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descricao_fieldActionPerformed(evt);
+                textFieldDescricaoActionPerformed(evt);
             }
         });
 
-        valorCompra_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorCompra_fieldActionPerformed(evt);
+                textFieldCompraActionPerformed(evt);
             }
         });
 
-        estoque_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estoque_fieldActionPerformed(evt);
+                textFieldEstoqueActionPerformed(evt);
             }
         });
 
-        nomeCategoria_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldNomeCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeCategoria_fieldActionPerformed(evt);
+                textFieldNomeCategoriaActionPerformed(evt);
             }
         });
 
-        descricaoCategoria_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldDescricaoCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descricaoCategoria_fieldActionPerformed(evt);
+                textFieldDescricaoCategoriaActionPerformed(evt);
             }
         });
 
-        volta.setText("Voltar");
-        volta.addActionListener(new java.awt.event.ActionListener() {
+        buttonVoltar.setText("Voltar");
+        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltaActionPerformed(evt);
+                buttonVoltarActionPerformed(evt);
             }
         });
 
-        Enviar.setText("Enviar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
+        buttonEnviar.setText("Enviar");
+        buttonEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
+                buttonEnviarActionPerformed(evt);
             }
         });
 
         jLabel7.setText("Valor da venda:");
 
-        valorVenda_field.addActionListener(new java.awt.event.ActionListener() {
+        textFieldVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorVenda_fieldActionPerformed(evt);
+                textFieldVendaActionPerformed(evt);
             }
         });
 
@@ -121,7 +121,7 @@ public class Inserir_componentes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(volta)
+                .addComponent(buttonVoltar)
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -131,102 +131,102 @@ public class Inserir_componentes extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel3)
-                            .addComponent(descricao_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nome_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valorCompra_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
-                            .addComponent(nomeCategoria_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(estoque_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldNomeCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7)
-                            .addComponent(valorVenda_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textFieldVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(descricaoCategoria_field, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldDescricaoCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buttonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(volta))
+                        .addComponent(buttonVoltar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nome_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(descricao_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(valorCompra_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(valorVenda_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(estoque_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(nomeCategoria_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldNomeCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(descricaoCategoria_field, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textFieldDescricaoCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nome_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_fieldActionPerformed
+    private void textFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome_fieldActionPerformed
+    }//GEN-LAST:event_textFieldNomeActionPerformed
 
-    private void descricao_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricao_fieldActionPerformed
+    private void textFieldDescricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDescricaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_descricao_fieldActionPerformed
+    }//GEN-LAST:event_textFieldDescricaoActionPerformed
 
-    private void valorCompra_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCompra_fieldActionPerformed
+    private void textFieldCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCompraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valorCompra_fieldActionPerformed
+    }//GEN-LAST:event_textFieldCompraActionPerformed
 
-    private void estoque_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estoque_fieldActionPerformed
+    private void textFieldEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldEstoqueActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_estoque_fieldActionPerformed
+    }//GEN-LAST:event_textFieldEstoqueActionPerformed
 
-    private void nomeCategoria_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCategoria_fieldActionPerformed
+    private void textFieldNomeCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNomeCategoriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeCategoria_fieldActionPerformed
+    }//GEN-LAST:event_textFieldNomeCategoriaActionPerformed
 
-    private void descricaoCategoria_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoCategoria_fieldActionPerformed
+    private void textFieldDescricaoCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDescricaoCategoriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_descricaoCategoria_fieldActionPerformed
+    }//GEN-LAST:event_textFieldDescricaoCategoriaActionPerformed
 
-    private void voltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltaActionPerformed
+    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_voltaActionPerformed
+    }//GEN-LAST:event_buttonVoltarActionPerformed
 
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
+    private void buttonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnviarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
+    }//GEN-LAST:event_buttonEnviarActionPerformed
 
-    private void valorVenda_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorVenda_fieldActionPerformed
+    private void textFieldVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldVendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valorVenda_fieldActionPerformed
+    }//GEN-LAST:event_textFieldVendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,30 +245,30 @@ public class Inserir_componentes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inserir_componentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InserirProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inserir_componentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InserirProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inserir_componentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InserirProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inserir_componentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InserirProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Inserir_componentes().setVisible(true);
+                new InserirProduto().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Enviar;
-    private javax.swing.JTextField descricaoCategoria_field;
-    private javax.swing.JTextField descricao_field;
-    private javax.swing.JTextField estoque_field;
+    private javax.swing.JButton buttonEnviar;
+    private javax.swing.JButton buttonVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -276,10 +276,12 @@ public class Inserir_componentes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField nomeCategoria_field;
-    private javax.swing.JTextField nome_field;
-    private javax.swing.JTextField valorCompra_field;
-    private javax.swing.JTextField valorVenda_field;
-    private javax.swing.JButton volta;
+    private javax.swing.JTextField textFieldCompra;
+    private javax.swing.JTextField textFieldDescricao;
+    private javax.swing.JTextField textFieldDescricaoCategoria;
+    private javax.swing.JTextField textFieldEstoque;
+    private javax.swing.JTextField textFieldNome;
+    private javax.swing.JTextField textFieldNomeCategoria;
+    private javax.swing.JTextField textFieldVenda;
     // End of variables declaration//GEN-END:variables
 }

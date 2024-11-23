@@ -102,6 +102,16 @@ public class Produto implements Serializable {
     }
 
 
+    public String getDataForSales(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(nome);
+        sb.append(" | ");
+        sb.append(precoVenda);
+        sb.append(" | ");
+        sb.append(quantidade);
+        return sb.toString();
+    }
+
 
     @Override
     public boolean equals(Object o) {

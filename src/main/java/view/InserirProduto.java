@@ -11,7 +11,7 @@ import model.entities.Produto;
 
 import javax.swing.*;
 
-public class InserirProduto extends javax.swing.JFrame {
+public class InserirProduto extends javax.swing.JFrame implements Navegacao {
 
     public InserirProduto() {
         initComponents();
@@ -55,7 +55,7 @@ public class InserirProduto extends javax.swing.JFrame {
         volta.setText("Voltar");
         volta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltaActionPerformed(evt);
+                buttonVoltarActionPerformed(evt, InserirProduto.this);
             }
         });
 
@@ -143,12 +143,6 @@ public class InserirProduto extends javax.swing.JFrame {
         );
 
         pack();
-    }
-
-    private void voltaActionPerformed(java.awt.event.ActionEvent evt) {
-        Menu menu = new Menu();
-        menu.setVisible(true);
-        this.dispose();
     }
 
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {  

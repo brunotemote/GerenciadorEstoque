@@ -8,7 +8,7 @@ package view;
  *
  * @author mikae
  */
-public class Relatorios extends javax.swing.JFrame {
+public class Relatorios extends javax.swing.JFrame implements Navegacao{
 
     /**
      * Creates new form Relatorios
@@ -84,6 +84,11 @@ public class Relatorios extends javax.swing.JFrame {
         });
 
         buttonVoltar.setText("Voltar");
+        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonVoltarActionPerformed(evt, Relatorios.this);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -113,8 +113,27 @@ public class ProdutoDaoJDBC implements ProdutoDao {
     }
 
     @Override
-    public void deleteByName(String name) {
+    public Integer deleteByName(String name) {
+        PreparedStatement st = null;
+        int rowsAffected = 0;
+        try{
+            st = conn.prepareStatement(
+                    "UPDATE Produto "
+                    + "INNER JOIN Categoria "
+                    + "ON Produto.categoria_id = Categoria.id "
+                    + "SET Produto.deleted = 1 "
+                    + "WHERE UPPER(Produto.nome) = UPPER(?) AND Produto.deleted = 0");
 
+            st.setString(1, name);
+            rowsAffected = st.executeUpdate();
+
+        } catch (SQLException e){
+            DB.closeStatement(st);
+        } finally {
+            DB.closeStatement(st);
+        }
+
+        return rowsAffected;
     }
 
     @Override
@@ -146,6 +165,36 @@ public class ProdutoDaoJDBC implements ProdutoDao {
         }
 
 
+    }
+
+    @Override
+    public Produto findByNameAndCategory(String name, Categoria categoria) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try{
+            st = conn.prepareStatement(
+                    "SELECT Produto.*, Categoria.nome as nome_categoria, Categoria.descricao as descricao_categoria "
+                            + "FROM Produto INNER JOIN Categoria "
+                            + "ON Produto.categoria_id = Categoria.id "
+                            + "WHERE UPPER(Produto.nome) = UPPER(?) AND Produto.deleted = 0 AND UPPER(Categoria.nome) = UPPER(?)");
+
+            st.setString(1, name);
+            st.setString(2, categoria.getNome());
+            rs = st.executeQuery();
+
+            if (!rs.next()) return null;
+
+            Categoria cat = instantiateCategoria(rs);
+            Produto prod = instantiateProduto(rs, cat);
+
+            return prod;
+
+        } catch (SQLException e){
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
+        }
     }
 
     private Produto instantiateProduto(ResultSet rs, Categoria cat) throws SQLException {
@@ -210,7 +259,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
     }
 
     @Override
-    public List<Produto> findByCategoria(Categoria categoria) {
+    public List<Produto> findAllByCategoria(Categoria categoria) {
         PreparedStatement st = null;
         ResultSet rs = null;
         try{
@@ -218,7 +267,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
                     "SELECT Produto.*, Categoria.nome as nome_categoria, Categoria.descricao as descricao_categoria "
                     + "FROM Produto INNER JOIN Categoria "
                     + "ON Produto.categoria_id = Categoria.id "
-                    + "WHERE Categoria.nome = ? "
+                    + "WHERE UPPER(Categoria.nome) = UPPER(?) AND Produto.deleted = 0 "
                     + "ORDER BY nome;"
             );
 

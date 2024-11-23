@@ -9,8 +9,10 @@ public interface ProdutoDao {
 
     boolean insert(Produto obj);
     Integer update(String nome, String valorCompra, String valorVenda, String quantidade);
-    void deleteByName(String name);
+    Integer deleteByName(String name);
     Produto findByName(String name);
+    Produto findByNameAndCategory(String name, Categoria categoria);
     List<Produto> findAll();
-    List<Produto> findByCategoria(Categoria categoria);
+    List<Produto> findAllByCategoria(Categoria categoria);
+
 }

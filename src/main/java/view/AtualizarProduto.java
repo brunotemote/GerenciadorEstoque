@@ -11,7 +11,7 @@ import model.entities.Produto;
 
 import javax.swing.*;
 
-public class AtualizarProduto extends javax.swing.JFrame {
+public class AtualizarProduto extends javax.swing.JFrame implements Navegacao {
 
     public AtualizarProduto() {
         initComponents();
@@ -45,7 +45,7 @@ public class AtualizarProduto extends javax.swing.JFrame {
         buttonVoltar.setText("Voltar");
         buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonVoltarActionPerformed(evt);
+                buttonVoltarActionPerformed(evt, AtualizarProduto.this);
             }
         });
 
@@ -115,13 +115,7 @@ public class AtualizarProduto extends javax.swing.JFrame {
 
         pack();
     }
-
-
-    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {
-        Menu menu = new Menu();
-        menu.setVisible(true);
-        this.dispose();
-    }
+    
 
     private void buttonAtualizarActionPerformed(java.awt.event.ActionEvent evt) {
         ProdutoDao produtoDao = DaoFactory.createProdutoDao();
@@ -135,6 +129,18 @@ public class AtualizarProduto extends javax.swing.JFrame {
             return;
         }
 
+        try {
+            if ((!textFieldEstoque.getText().isEmpty() && Integer.parseInt(textFieldEstoque.getText()) <= 0) ||
+                (!textFieldCompra.getText().isEmpty() && Float.parseFloat(textFieldCompra.getText()) <= 0) ||
+                (!textFieldVenda.getText().isEmpty() && Float.parseFloat(textFieldVenda.getText()) <= 0)) {
+                JOptionPane.showInternalMessageDialog(null, "Por favor insira valores maiores que zero.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showInternalMessageDialog(null, "Por favor insira valores numéricos válidos.");
+            return;
+        }
+        
         Produto prod = produtoDao.findByName(textFieldNome.getText());
         if (prod == null){
             JOptionPane.showInternalMessageDialog(null, "Produto não encontrado! Verifique se digitou corretamente.");

@@ -30,7 +30,7 @@ public class Relatorios extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         labelRelatorio = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        relatoriosTable = new javax.swing.JTable();
         buttonRelatorioCadastro = new javax.swing.JButton();
         buttonMovimentacao = new javax.swing.JButton();
         buttonEstoque = new javax.swing.JButton();
@@ -42,7 +42,7 @@ public class Relatorios extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Relatorios");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        relatoriosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -53,15 +53,35 @@ public class Relatorios extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(relatoriosTable);
 
         buttonRelatorioCadastro.setText("Relatorio de Cadastro");
+        buttonRelatorioCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRelatorioCadastroActionPerformed(evt);
+            }
+        });
 
         buttonMovimentacao.setText("Movimentacao de Estoque");
+        buttonMovimentacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMovimentacaoActionPerformed(evt);
+            }
+        });
 
         buttonEstoque.setText("Estoque Baixo");
+        buttonEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEstoqueActionPerformed(evt);
+            }
+        });
 
         buttonVendas.setText("Relatorio de Vendas");
+        buttonVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonVendasActionPerformed(evt);
+            }
+        });
 
         buttonVoltar.setText("Voltar");
 
@@ -121,6 +141,22 @@ public class Relatorios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void buttonRelatorioCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRelatorioCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRelatorioCadastroActionPerformed
+
+    private void buttonMovimentacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMovimentacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMovimentacaoActionPerformed
+
+    private void buttonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEstoqueActionPerformed
+
+    private void buttonVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVendasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonVendasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -165,7 +201,7 @@ public class Relatorios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelRelatorio;
+    private javax.swing.JTable relatoriosTable;
     // End of variables declaration//GEN-END:variables
 }

@@ -41,12 +41,22 @@ public class EditarCategoria extends javax.swing.JFrame {
         jLabel1.setText("Nome Categoria:");
 
         buttonVoltar.setText("Voltar");
+        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonVoltarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Novo nome:");
 
         jLabel3.setText("Nova descricao:");
 
         buttonAtualizar.setText("Atualizar");
+        buttonAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAtualizarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +113,14 @@ public class EditarCategoria extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonVoltarActionPerformed
+
+    private void buttonAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAtualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAtualizarActionPerformed
 
     /**
      * @param args the command line arguments

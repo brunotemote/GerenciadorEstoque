@@ -1,19 +1,19 @@
+-- cria um trigger chamado trigger_relatorio_produtos_update
 CREATE TRIGGER trigger_relatorio_produtos_update
-AFTER UPDATE ON Produto
-FOR EACH ROW
+AFTER UPDATE ON Produto  -- executa o trigger apos uma atualizacao na tabela Produto
+FOR EACH ROW  -- executa o trigger para cada linha atualizada
 BEGIN
-    DECLARE categoria_nome VARCHAR(255);
+    DECLARE categoria_nome VARCHAR(255);  -- variavel para armazenar o nome da categoria
 
-    -- Obtém o nome da categoria do produto
+    -- obtem o nome da categoria do produto
     SELECT nome INTO categoria_nome
     FROM Categoria
     WHERE id = NEW.categoria_id;
 
-    -- Insere ou atualiza o relatório de produtos
-
+    -- insere ou atualiza o relatorio de produtos
     INSERT INTO RelatorioProdutos (produto_id, nome, descricao, quantidade_estoque, preco_compra, preco_venda, categoria_nome)
     VALUES (NEW.id, NEW.nome, NEW.descricao, NEW.quantidade_estoque, NEW.preco_compra, NEW.preco_venda, categoria_nome)
-    ON DUPLICATE KEY UPDATE
+    ON DUPLICATE KEY UPDATE  -- se ja existir um relatorio para o produto, atualiza os dados
         nome = NEW.nome,
         descricao = NEW.descricao,
         quantidade_estoque = NEW.quantidade_estoque,

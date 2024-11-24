@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class SqlFileReader {
 
-    public static StringBuilder read(String path){
+    public static String read(String path){
 
         try{
             BufferedReader br = new BufferedReader(new FileReader(path));
@@ -18,7 +18,7 @@ public class SqlFileReader {
                 sql.append(line).append("\n");
             }
 
-            return sql;
+            return sql.toString();
 
         } catch (IOException e) {
             throw new RuntimeException(e);

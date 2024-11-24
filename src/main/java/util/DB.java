@@ -2,6 +2,8 @@ package util;
 
 import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class DB {
@@ -27,19 +29,30 @@ public class DB {
 
         try  {
             Connection conn = getConnection();
-            String pathCreateCategoria = "src/main/resources/createCategoria.sql";
-            String pathCreateProcedure = "src/main/resources/createProcedure.sql";
-            String pathCreateProduto = "src/main/resources/createProduto.sql";
 
-            String createCategoriaSql = SqlFileReader.read(pathCreateCategoria).toString();
-            String createProdutoSql = SqlFileReader.read(pathCreateProduto).toString();
-            String createProcedureSql = SqlFileReader.read(pathCreateProcedure).toString();
+            List<String> sqlFiles = new ArrayList<>();
+
+            sqlFiles.add("src/main/resources/createCategoria.sql");
+            sqlFiles.add("src/main/resources/createProduto.sql");
+            sqlFiles.add("src/main/resources/createAlertaEstoque.sql");
+            sqlFiles.add("src/main/resources/createMovimentacao.sql");
+            sqlFiles.add("src/main/resources/createRelatorioProdutos.sql");
+            sqlFiles.add("src/main/resources/createRelatorioVendas.sql");
+            sqlFiles.add("src/main/resources/createProcedure.sql");
+
+            sqlFiles.add("src/main/resources/triggerEstoqueBaixo.sql");
+            sqlFiles.add("src/main/resources/triggerMovimentacao.sql");
+            sqlFiles.add("src/main/resources/triggerRelatorioProdutoInsert.sql");
+            sqlFiles.add("src/main/resources/triggerRelatorioProdutoUpdate.sql");
+            sqlFiles.add("src/main/resources/triggerRelatorioVendas.sql");
 
             st = conn.createStatement();
 
-            st.execute(createCategoriaSql);
-            st.execute(createProdutoSql);
-            st.execute(createProcedureSql);
+            for(String file : sqlFiles){
+                String sql = SqlFileReader.read(file);
+                System.out.println(sql + "\n" + "-------------------------");
+                st.execute(sql);
+            }
 
             System.out.println("Configuracao inicial banco de dados criado com sucesso");
 

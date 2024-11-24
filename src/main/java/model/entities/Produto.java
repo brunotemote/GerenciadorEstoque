@@ -1,23 +1,22 @@
-package model.entities;
+package model.entities; // pacote da entidade
 
-import java.io.Serializable;
-import java.util.*;
+import java.io.Serializable; // importa a interface Serializable
+import java.util.*; // importa as classes utilitárias
 
-public class Produto implements Serializable {
+public class Produto implements Serializable { // classe que representa um produto, implementa Serializable para permitir a serialização do objeto
 
-    private Integer id;
-    private String nome;
-    private String descricao;
-    private Double precoCompra;
-    private Double precoVenda;
-    private Integer quantidade;
-    private Categoria categoria;
+    private Integer id; // identificador único do produto
+    private String nome; // nome do produto
+    private String descricao; // descrição do produto
+    private Double precoCompra; // preço de compra do produto
+    private Double precoVenda; // preço de venda do produto
+    private Integer quantidade; // quantidade em estoque do produto
+    private Categoria categoria; // categoria do produto
 
-
-    public Produto() {
+    public Produto() { // construtor padrão
     }
 
-    public Produto(Integer id, String nome, String descricao, Double precoCompra, Double precoVenda, Integer quantidade, Categoria categoria) {
+    public Produto(Integer id, String nome, String descricao, Double precoCompra, Double precoVenda, Integer quantidade, Categoria categoria) { // construtor com parâmetros
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -27,6 +26,7 @@ public class Produto implements Serializable {
         this.categoria = categoria;
     }
 
+    // getters e setters para os atributos da classe
     public Categoria getCategoria() {
         return categoria;
     }
@@ -83,7 +83,7 @@ public class Produto implements Serializable {
         this.quantidade = quantidade;
     }
 
-    public String[] getTableFormat() {
+    public String[] getTableFormat() { // retorna um array de strings com os dados do produto formatados para tabela
         List<Object> list = new ArrayList<>();
         list.add(id);
         list.add(nome);
@@ -102,7 +102,7 @@ public class Produto implements Serializable {
     }
 
 
-    public String getDataForSales(){
+    public String getDataForSales(){ // retorna uma string com os dados do produto formatados para vendas
         StringBuilder sb = new StringBuilder();
         sb.append(nome);
         sb.append(" | ");
@@ -114,19 +114,19 @@ public class Produto implements Serializable {
 
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) { // sobrescreve o método equals para comparar produtos pelo nome
         if (o == null || getClass() != o.getClass()) return false;
         Produto produto = (Produto) o;
         return Objects.equals(nome, produto.nome);
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() { // sobrescreve o método hashCode para gerar um código hash baseado no nome
         return Objects.hashCode(nome);
     }
 
     @Override
-    public String toString() {
+    public String toString() { // sobrescreve o método toString para retornar uma representação em string do produto
         return "Produto{" +
                 "categoria=" + categoria +
                 ", id=" + id +
